@@ -28,7 +28,19 @@ class MailFormRecipientList extends Component {
         })
     }
 
-    handleEmailDeletion(event) {}
+    handleEmailDeletion(deleted) {
+        console.log('email to be deleted:' + deleted)
+
+        let newList = this.state.recipientEmails.filter(
+            email => email !== deleted
+        )
+
+        console.log('current emails' + newList.length)
+
+        this.setState({
+            emails: newList,
+        })
+    }
 
     render() {
         let addedEmails = this.state.recipientEmails.map(email => {
@@ -36,7 +48,7 @@ class MailFormRecipientList extends Component {
                 <MailFormRecipient
                     key={email}
                     recipientEmail={email}
-                    deleteMethod={this.handleEmailDeletion.bind(this)}
+                    deleteMethod={this.handleEmailDeletion.bind(this, email)}
                 />
             )
         })
