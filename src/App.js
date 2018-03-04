@@ -1,19 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import MailForm from './MailForm/MailForm.js';
+import React, { Component } from 'react'
+import { Container, Row, Col, Jumbotron } from 'reactstrap'
+
+import MailForm from './MailForm/MailForm.js'
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">SM Tech Challenge</h1>
-        </header>
-          <MailForm/>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <Container>
+                <Row>
+                    <Jumbotron>
+                        <h1 className="display-3">SM Tech Challenge</h1>
+                    </Jumbotron>
+                </Row>
+                <Row>
+                    <Col>
+                        {' '}
+                        <MailForm />{' '}
+                    </Col>
+                </Row>
+            </Container>
+        )
+    }
 }
 
-export default App;
+export default App
