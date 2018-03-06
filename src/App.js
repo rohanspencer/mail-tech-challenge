@@ -9,13 +9,14 @@ class App extends Component {
             <Container>
                 <Row>
                     <Jumbotron>
-                        <h1 className="display-3">SM Tech Challenge</h1>
+                        <h1 className="display-3">
+                            SM Tech Challenge Mail Client
+                        </h1>
                     </Jumbotron>
                 </Row>
                 <Row>
                     <Col>
-                        {' '}
-                        <MailForm />{' '}
+                        <MailForm />
                     </Col>
                 </Row>
             </Container>
